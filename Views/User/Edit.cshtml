@@ -1,0 +1,39 @@
+@model User;
+
+@{
+    ViewData["Title"]="Edit user";
+}
+
+<div class="col-6">
+    <form asp-controller="User" asp-action="Update" asp-route-id="@Model.Id" method="post">
+       <div class="mb-3">
+            <label for="FirstName">Ismingiz:</label>
+            <input type="text" name="FirstName" class="form-control" value="@Model.FirstName">
+        </div>
+        <div class="mb-3">
+            <label for="LastName">Familiyangiz:</label>
+            <input type="text" name="LastName" class="form-control" value="@Model.LastName">
+        </div>
+        <div class="mb-3">
+            <label for="PhoneNumber">Telifon raqamingiz:</label>
+            <input type="number" name="PhoneNumber" class="form-control" value="@Model.PhoneNumber">
+        </div>
+        <div class="mb-3">
+            <label for="Email">Elektron pochtangiz:</label>
+            <input type="email" name="Email" class="form-control" value="@Model.Email">
+        </div>
+        <div class="mb-3">
+            <label for="Login">Login:</label>
+            <input type="text" name="Login" class="form-control" value="@Model.Login">
+        </div>
+        <div class="mb-3">
+            <label for="Password">Parolingiz:</label>
+            <input type="password" name="Password" class="form-control" value="@Model.Password">
+        </div>
+        <div class="mb-3">
+            <label for="PasswordConfirm">Parolingizni qayta kiriting:</label>
+            <input type="password" name="PasswordConfirm" class="form-control" value="@Model.PasswordConfirm">
+        </div>
+        <button type="submit" class="btn btn-success">добавить</button>
+    </form>
+</div>

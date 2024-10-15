@@ -1,0 +1,39 @@
+@model User;
+
+@{
+    ViewData["Title"]="Add user";
+}
+
+<div class="col-6">
+    <form asp-controller="User" asp-action="Store" method="post">
+        <div class="mb-3">
+            <label for="FirstName">Ismingiz:</label>
+            <input type="text" name="FirstName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="LastName">Familiyangiz:</label>
+            <input type="text" name="LastName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="PhoneNumber">Telifon raqamingiz:</label>
+            <input type="number" name="PhoneNumber" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="Email">Elektron pochtangiz:</label>
+            <input type="email" name="Email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="Login">Login:</label>
+            <input type="text" name="Login" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="Password">Parolingiz:</label>
+            <input type="number" name="Password" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="PasswordConfirm">Parolingizni qayta kiriting:</label>
+            <input type="number" name="PasswordConfirm" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">добавить</button>
+    </form>
+</div>
